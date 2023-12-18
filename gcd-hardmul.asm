@@ -45,7 +45,9 @@ $BB2_1:                                 # =>This Inner Loop Header: Depth=1
         move    $4, $2
         beqz    $2, $BB2_4
         sll $0, $0, 0
-        divu    $zero, $5, $2
+        # divu    $zero, $5, $2
+        divu    $5, $2
+        mflo    $0
         # teq     $2, $zero, 7
         move    $4, $2
         j       $BB2_1
